@@ -14,6 +14,10 @@ public class Building : MonoBehaviour
     {
         distance = Mathf.Infinity;
         //mesh = this.GetComponent<Renderer>();
+        
+    }
+    private void FindNeighBour()
+    {
         neighbour = GameObject.FindGameObjectsWithTag("Building");
 
         Vector3 position = transform.position;
@@ -23,7 +27,7 @@ public class Building : MonoBehaviour
             if (diff.sqrMagnitude >= 1f)
             {
                 neighbour[i - 1] = neighbour[i];
-               
+
             }
 
         }
