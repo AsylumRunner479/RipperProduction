@@ -135,12 +135,12 @@ VisualEffectResource:
       with strip\r\n#endif\r\n        \r\n        {\n            SetAttribute_E6295C0(
       /*inout */attributes.velocity,  /*inout */attributes.seed, float3(0, -24, 0),
       float3(0, -30, 0));\n        }\n        {\n            SetAttribute_F0142CB9(
-      /*inout */attributes.lifetime, (float)7);\n        }\n        {\n           
+      /*inout */attributes.lifetime, (float)0.699999988);\n        }\n        {\n           
       SetAttribute_CAC295B2( /*inout */attributes.position,  /*inout */attributes.seed,
       float3(0, 0, 0), float3(80, 0, 40));\n        }\n        {\n            SetAttribute_D51517D7(
       /*inout */attributes.scaleX,  /*inout */attributes.scaleY,  /*inout */attributes.scaleZ, 
-      /*inout */attributes.seed, float3(0.100000001, 2, 0.100000001), float3(0.200000003,
-      20, 0.200000003));\n        }\n        \n\r\n\t\t\r\n#if VFX_USE_ALIVE_CURRENT\r\n       
+      /*inout */attributes.seed, float3(0.100000001, 2, 0.100000001), float3(0.400000006,
+      40, 0.400000006));\n        }\n        \n\r\n\t\t\r\n#if VFX_USE_ALIVE_CURRENT\r\n       
       if (attributes.alive)\r\n#endif       \r\n        {\r\n#if USE_DEAD_LIST\r\n\t       
       uint deadIndex = deadListIn.DecrementCounter();\r\n            uint index =
       deadListIn[deadIndex];\r\n#else\r\n            uint index = particleIndex;\r\n#endif\r\n           
@@ -841,13 +841,13 @@ VisualEffectResource:
         - m_ExpressionIndex: 6
           m_Value: 4
         - m_ExpressionIndex: 11
-          m_Value: 7
+          m_Value: 0.7
       m_Vector2f:
         m_Array: []
       m_Vector3f:
         m_Array:
         - m_ExpressionIndex: 8
-          m_Value: {x: 0.2, y: 20, z: 0.2}
+          m_Value: {x: 0.4, y: 40, z: 0.4}
         - m_ExpressionIndex: 9
           m_Value: {x: 0.1, y: 2, z: 0.1}
         - m_ExpressionIndex: 10
@@ -895,7 +895,7 @@ VisualEffectResource:
       m_NamedObject:
         m_Array:
         - m_ExpressionIndex: 16
-          m_Value: {fileID: 2800000, guid: 276d9e395ae18fe40a9b4988549f2349, type: 3}
+          m_Value: {fileID: 2800000, guid: 131633c45b26caa4f9673a16077a1970, type: 3}
       m_Bool:
         m_Array: []
     m_ExposedExpressions: []
@@ -2109,7 +2109,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
-      m_SerializableObject: 7
+      m_SerializableObject: 0.7
     m_Space: 2147483647
   m_Property:
     name: Lifetime
@@ -2707,7 +2707,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"x":0.20000000298023225,"y":20.0,"z":0.20000000298023225}'
+      m_SerializableObject: '{"x":0.4000000059604645,"y":40.0,"z":0.4000000059604645}'
     m_Space: 2147483647
   m_Property:
     name: B
@@ -2889,7 +2889,7 @@ MonoBehaviour:
       m_Type:
         m_SerializableType: UnityEngine.Texture2D, UnityEngine.CoreModule, Version=0.0.0.0,
           Culture=neutral, PublicKeyToken=null
-      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"276d9e395ae18fe40a9b4988549f2349","type":3}}'
+      m_SerializableObject: '{"obj":{"fileID":2800000,"guid":"131633c45b26caa4f9673a16077a1970","type":3}}'
     m_Space: 2147483647
   m_Property:
     name: mainTexture
