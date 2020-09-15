@@ -9,6 +9,7 @@ public class Testing : MonoBehaviour
     public int y = 5;
    private void Start()
     {
-        Grid grid = new Grid(x, y, 3, Building);
+        //Grid grid = new Grid(x, y, 3, Building);
+        FindObjectOfType<Grid>().Setup(x, y, 3, Building);
     }
 }

@@ -10,7 +10,7 @@ public class Grid : MonoBehaviour
     private int[,] gridArray;
     Node[,] node;
     
-   public Grid(int width, int height, float cellSize, GameObject Building)
+   public void Setup(int width, int height, float cellSize, GameObject Building)
     {
         this.width = width;
         this.height = height;

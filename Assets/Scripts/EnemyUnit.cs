@@ -8,8 +8,10 @@ public class EnemyUnit : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        MaxSpeed = 1;
+        CurSpeed = 1;
     }
+    
     public void Move()
     {
         CurSpeed -= 1; 
@@ -17,7 +19,7 @@ public class EnemyUnit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameManager.player == true)
+        if (GameManager.isPlayerTurn == true)
         {
             CurSpeed = MaxSpeed;
         }
