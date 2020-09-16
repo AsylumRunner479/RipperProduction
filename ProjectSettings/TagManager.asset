@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Building
   - enemy
+  - medication
+  - Knife
+  - Map
   layers:
   - Default
   - TransparentFX
