@@ -8,6 +8,7 @@ public class EnemyUnit : MonoBehaviour
     public Grid grid;
     public GameManager game;
     public Vector2Int currentIndex, nextIndex, playerIndex;
+    public GameObject player, enemy;
     [Tooltip("The amount of time it takes to move from one node to the next.")]
     public float maxTime = 1;
     private int MaxSpeed, CurSpeed;
@@ -18,7 +19,7 @@ public class EnemyUnit : MonoBehaviour
     {
         CurSpeed = 2;
         MaxSpeed = 2;
-        playerIndex = new Vector2Int(2, 1);
+        //playerIndex = new Vector2Int(2, 1);
         currentIndex = new Vector2Int(1, 2);
         nextIndex = currentIndex;
         currentTime = maxTime;
@@ -38,6 +39,7 @@ public class EnemyUnit : MonoBehaviour
         {
             CurSpeed = MaxSpeed;
             //playerIndex = 
+            enemy.SetActive(false);
         }
         if (currentTime < maxTime)
         {
@@ -53,36 +55,76 @@ public class EnemyUnit : MonoBehaviour
 
                 game.StartPlayerTurn();
             }
-
+            RandomX(3);
+            if (number0 == 0)
+            {
+                if (player.transform.position.x < transform.position.x)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y++;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else if (player.transform.position.x > transform.position.x)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y--;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else if (player.transform.position.z < transform.position.z)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.x++;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.x--;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+            }
+            else if(number0 == 1)
+            {
+                CurSpeed -= 1;
+                enemy.SetActive(true);
+            }
+            else
+            {
+                if (player.transform.position.z < transform.position.z)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y++;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else if (player.transform.position.z > transform.position.z)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y--;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else if (player.transform.position.x < transform.position.x)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.x++;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.x--;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+            }
             //targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            if (Input.GetKeyDown(KeyCode.UpArrow) && nextIndex.y + 1 <= grid.height - 1)
-            {
-                currentIndex = nextIndex;
-                nextIndex.y++;
-                currentTime = 0;
-                CurSpeed -= 1;
-            }
-            else if (Input.GetKeyDown(KeyCode.DownArrow) && nextIndex.y - 1 >= 0)
-            {
-                currentIndex = nextIndex;
-                nextIndex.y--;
-                currentTime = 0;
-                CurSpeed -= 1;
-            }
-            else if (Input.GetKeyDown(KeyCode.RightArrow) && nextIndex.x + 1 <= grid.width - 1)
-            {
-                currentIndex = nextIndex;
-                nextIndex.x++;
-                currentTime = 0;
-                CurSpeed -= 1;
-            }
-            else if (Input.GetKeyDown(KeyCode.LeftArrow) && nextIndex.x + 1 >= 0)
-            {
-                currentIndex = nextIndex;
-                nextIndex.x--;
-                currentTime = 0;
-                CurSpeed -= 1;
-            }
+            
         }
     }
 }
