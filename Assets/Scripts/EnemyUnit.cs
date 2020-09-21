@@ -20,7 +20,7 @@ public class EnemyUnit : MonoBehaviour
         CurSpeed = 2;
         MaxSpeed = 2;
         //playerIndex = new Vector2Int(2, 1);
-        currentIndex = new Vector2Int(1, 2);
+        currentIndex = new Vector2Int(Random.Range(0, grid.width), Random.Range(0,grid.height));
         nextIndex = currentIndex;
         currentTime = maxTime;
     }
@@ -58,21 +58,21 @@ public class EnemyUnit : MonoBehaviour
             RandomX(3);
             if (number0 == 0)
             {
-                if (player.transform.position.x < transform.position.x)
+                if (player.transform.position.x > transform.position.x)
                 {
                     currentIndex = nextIndex;
                     nextIndex.y++;
                     currentTime = 0;
                     CurSpeed -= 1;
                 }
-                else if (player.transform.position.x > transform.position.x)
+                else if (player.transform.position.x < transform.position.x)
                 {
                     currentIndex = nextIndex;
                     nextIndex.y--;
                     currentTime = 0;
                     CurSpeed -= 1;
                 }
-                else if (player.transform.position.z < transform.position.z)
+                else if (player.transform.position.z > transform.position.z)
                 {
                     currentIndex = nextIndex;
                     nextIndex.x++;
@@ -94,31 +94,31 @@ public class EnemyUnit : MonoBehaviour
             }
             else
             {
-                if (player.transform.position.z < transform.position.z)
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.y++;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-                else if (player.transform.position.z > transform.position.z)
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.y--;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-                else if (player.transform.position.x < transform.position.x)
+                if (player.transform.position.z > transform.position.z)
                 {
                     currentIndex = nextIndex;
                     nextIndex.x++;
                     currentTime = 0;
                     CurSpeed -= 1;
                 }
-                else
+                else if (player.transform.position.z < transform.position.z)
                 {
                     currentIndex = nextIndex;
                     nextIndex.x--;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else if (player.transform.position.x > transform.position.x)
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y++;
+                    currentTime = 0;
+                    CurSpeed -= 1;
+                }
+                else
+                {
+                    currentIndex = nextIndex;
+                    nextIndex.y--;
                     currentTime = 0;
                     CurSpeed -= 1;
                 }

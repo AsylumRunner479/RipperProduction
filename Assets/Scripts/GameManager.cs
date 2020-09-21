@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance = null;
-
+    public GameObject EnemyTurn;
     public static bool isPlayerTurn
     {
         get
@@ -42,10 +42,12 @@ public class GameManager : MonoBehaviour
     public void EndPlayerTurn()
     {
         playerTurn = false;
+        EnemyTurn.SetActive(true);
     }
     public void StartPlayerTurn()
     {
         playerTurn = true;
+        EnemyTurn.SetActive(false);
     }
     public void RestartGame()
     {

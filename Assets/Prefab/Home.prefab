@@ -208,7 +208,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 4ea35ea3d95e97b4498db79918d9dc0e, type: 2}
+  - {fileID: 2100000, guid: 9196408dc9c331d4dbd79c2e233be442, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -248,6 +248,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Street (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319977962589802665, guid: b0d65a7466454d845a2c3a799c4737bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8261012057998070298, guid: b0d65a7466454d845a2c3a799c4737bc,
         type: 3}
@@ -324,6 +329,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Street (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 7319977962589802665, guid: b0d65a7466454d845a2c3a799c4737bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8261012057998070298, guid: b0d65a7466454d845a2c3a799c4737bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -399,6 +409,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Street (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 7319977962589802665, guid: b0d65a7466454d845a2c3a799c4737bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8261012057998070298, guid: b0d65a7466454d845a2c3a799c4737bc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -473,6 +488,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Street
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319977962589802665, guid: b0d65a7466454d845a2c3a799c4737bc,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8261012057998070298, guid: b0d65a7466454d845a2c3a799c4737bc,
         type: 3}

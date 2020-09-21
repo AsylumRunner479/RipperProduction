@@ -11,10 +11,16 @@ public class Grid : MonoBehaviour
     Node[,] node;
     Transform[,] buildings;
     public float moveSpeed = 0;
+    private int homeX, homeY;
+    public bool homeSpawn = false;
+    private int random0;
     //Vector2Int currentNodeIndex
     //Vector2Int nextNodeIndex
     //Vector3.lerp(node[currentNodeIndex.x][currentNodeIndex.y], node[nextNodeIndex.x][nextNodeIndex.y]
-
+    public void RandomX(int random)
+    {
+        random0 = Random.Range(0, random - 1);
+    }
     public void GetPosition(Transform _transform, Vector2Int _currentIndex, Vector2Int _nextIndex, float _factor)
     {
         Vector3 start = buildings[_currentIndex.x, _currentIndex.y].position;
@@ -22,22 +28,64 @@ public class Grid : MonoBehaviour
         _transform.position = Vector3.Lerp(start, end, _factor);
     }
 
-    public void Setup(int width, int height, float cellSize, GameObject Building)
+    public void Setup(int width, int height, float cellSize, GameObject Building, GameObject home, GameObject knife, GameObject map, GameObject medic)
     {
         this.width = width;
         this.height = height;
         this.cellSize = cellSize;
         gridArray = new int[width, height];
         buildings = new Transform[width, height];
-
-        for (int x = 0; x < gridArray.GetLength(0); x++)
+        homeX = Random.Range(0, 2);
+        homeY = Random.Range(0, 2);
+        while (homeSpawn == false)
         {
-            for (int y = 0; y < gridArray.GetLength(1); y++)
+            
+            for (int x = 0; x < gridArray.GetLength(0); x++)
             {
-                Vector3 worldPoint = new Vector3(x * cellSize, 0, y * cellSize);
-                buildings[x,y] = Instantiate(Building, worldPoint, Quaternion.identity).transform;
+                for (int y = 0; y < gridArray.GetLength(1); y++)
+                {
+                    Vector3 worldPoint = new Vector3(x * cellSize, 0, y * cellSize);
+
+                    if (x == homeX && y == homeY)
+                    {
+                        RandomX(4);
+                        if (random0 == 0)
+                        {
+                            buildings[x, y] = Instantiate(knife, worldPoint, Quaternion.identity).transform;
+                        }
+                        else if (random0 == 1)
+                        {
+                            buildings[x, y] = Instantiate(map, worldPoint, Quaternion.identity).transform;
+                        }
+                        else if (random0 == 2 && homeSpawn == false)
+                        {
+                            buildings[x, y] = Instantiate(home, new Vector3(worldPoint.x, -1, worldPoint.z), Quaternion.identity).transform;
+                            homeSpawn = true;
+                        }
+                        else
+                        {
+                            buildings[x, y] = Instantiate(medic, worldPoint, Quaternion.identity).transform;
+                        }
+                        homeX += Random.Range(0, 2);
+                        if (homeX >= width)
+                        {
+                            homeX = Random.Range(0, 2);
+                        }
+                        homeY += Random.Range(0, 2);
+                        if (homeY >= height)
+                        {
+                            homeX = Random.Range(0, 2);
+                        }
+                    }
+                    else
+                    {
+                        buildings[x, y] = Instantiate(Building, new Vector3(worldPoint.x, -1, worldPoint.z), Quaternion.identity).transform;
+                    }
+
+                }
             }
         }
+        
     }
     private Vector3 GetWorldPosition(int x, int y)
     {
