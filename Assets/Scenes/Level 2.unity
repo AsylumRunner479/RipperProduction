@@ -353,11 +353,11 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7
+  orthographic size: 14
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 55
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 8400000, guid: 5022f1d28582d0c44b6294e8db28aca5, type: 2}
   m_TargetDisplay: 0
@@ -577,7 +577,6 @@ GameObject:
   - component: {fileID: 345129556}
   - component: {fileID: 345129555}
   - component: {fileID: 345129554}
-  - component: {fileID: 345129553}
   m_Layer: 5
   m_Name: Victory
   m_TagString: Untagged
@@ -585,19 +584,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 0
---- !u!114 &345129553
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 345129552}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d61a0c11bcadf45924bfebe6758625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyTurn: {fileID: 0}
 --- !u!114 &345129554
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -761,7 +747,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 345129553}
+      - m_Target: {fileID: 17321843}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1113,7 +1099,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1603745470}
+      - m_Target: {fileID: 17321843}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1823,7 +1809,6 @@ GameObject:
   - component: {fileID: 1603745468}
   - component: {fileID: 1603745467}
   - component: {fileID: 1603745466}
-  - component: {fileID: 1603745470}
   m_Layer: 5
   m_Name: Death
   m_TagString: Untagged
@@ -1912,19 +1897,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
---- !u!114 &1603745470
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1603745465}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d61a0c11bcadf45924bfebe6758625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyTurn: {fileID: 0}
 --- !u!1 &1789426127
 GameObject:
   m_ObjectHideFlags: 0
@@ -1959,7 +1931,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -573, y: 298}
+  m_AnchoredPosition: {x: -237, y: 134}
   m_SizeDelta: {x: 400, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1789426129

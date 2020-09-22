@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class EnemyUnit : MonoBehaviour
 {
@@ -14,9 +12,13 @@ public class EnemyUnit : MonoBehaviour
     private int MaxSpeed, CurSpeed;
     private float currentTime = 0;
     private int number0;
+    public GameObject Marker;
+    private PlayerUnit playerUnit;
     // Start is called before the first frame update
     void Start()
     {
+        playerUnit = player.GetComponent<PlayerUnit>();
+
         CurSpeed = 2;
         MaxSpeed = 2;
         //playerIndex = new Vector2Int(2, 1);
@@ -41,90 +43,124 @@ public class EnemyUnit : MonoBehaviour
             //playerIndex = 
             enemy.SetActive(false);
         }
-        if (currentTime < maxTime)
-        {
-            currentTime += Time.deltaTime;
-            grid.GetPosition(transform, currentIndex, nextIndex, Mathf.Clamp01(currentTime / maxTime));
-        }
         else
         {
 
 
-            if (CurSpeed <= 0)
+            if (currentTime < maxTime)
             {
-
-                game.StartPlayerTurn();
-            }
-            RandomX(3);
-            if (number0 == 0)
-            {
-                if (player.transform.position.x > transform.position.x)
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.y++;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-                else if (player.transform.position.x < transform.position.x)
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.y--;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-                else if (player.transform.position.z > transform.position.z)
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.x++;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-                else
-                {
-                    currentIndex = nextIndex;
-                    nextIndex.x--;
-                    currentTime = 0;
-                    CurSpeed -= 1;
-                }
-            }
-            else if(number0 == 1)
-            {
-                CurSpeed -= 1;
-                enemy.SetActive(true);
+                currentTime += Time.deltaTime;
+                grid.GetPosition(transform, currentIndex, nextIndex, Mathf.Clamp01(currentTime / maxTime));
             }
             else
             {
-                if (player.transform.position.z > transform.position.z)
+
+
+                if (CurSpeed <= 0)
                 {
-                    currentIndex = nextIndex;
-                    nextIndex.x++;
-                    currentTime = 0;
-                    CurSpeed -= 1;
+
+                    game.StartPlayerTurn();
                 }
-                else if (player.transform.position.z < transform.position.z)
+                RandomX(3);
+                if (number0 == 0)
                 {
-                    currentIndex = nextIndex;
-                    nextIndex.x--;
-                    currentTime = 0;
-                    CurSpeed -= 1;
+                    //if (player.transform.position.x > transform.position.x)
+                    //{
+                    //    currentIndex = nextIndex;
+                    //    nextIndex.y++;
+                    //    currentTime = 0;
+                    //    CurSpeed -= 1;
+                    //}
+                    //else if (player.transform.position.x < transform.position.x)
+                    //{
+                    //    currentIndex = nextIndex;
+                    //    nextIndex.y--;
+                    //    currentTime = 0;
+                    //    CurSpeed -= 1;
+                    //}
+                    //else if (player.transform.position.z > transform.position.z)
+                    //{
+                    //    currentIndex = nextIndex;
+                    //    nextIndex.x++;
+                    //    currentTime = 0;
+                    //    CurSpeed -= 1;
+                    //}
+                    //else
+                    //{
+                    //    currentIndex = nextIndex;
+                    //    nextIndex.x--;
+                    //    currentTime = 0;
+                    //    CurSpeed -= 1;
+                    //}
+                    if (playerUnit.currentIndex.y > currentIndex.y)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.y++;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else if (playerUnit.currentIndex.y < currentIndex.y)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.y--;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else if (playerUnit.currentIndex.x > currentIndex.x)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.x++;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.x--;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
                 }
-                else if (player.transform.position.x > transform.position.x)
+                else if (number0 == 1)
                 {
-                    currentIndex = nextIndex;
-                    nextIndex.y++;
-                    currentTime = 0;
                     CurSpeed -= 1;
+                    enemy.SetActive(true);
+                    currentTime = 0;
+                    Instantiate(enemy, Marker.transform.position, Quaternion.identity);
                 }
                 else
                 {
-                    currentIndex = nextIndex;
-                    nextIndex.y--;
-                    currentTime = 0;
-                    CurSpeed -= 1;
+                    if (playerUnit.currentIndex.x > currentIndex.x)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.x++;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else if (playerUnit.currentIndex.x < currentIndex.x)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.x--;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else if (playerUnit.currentIndex.y > currentIndex.y)
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.y++;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
+                    else
+                    {
+                        currentIndex = nextIndex;
+                        nextIndex.y--;
+                        currentTime = 0;
+                        CurSpeed -= 1;
+                    }
                 }
+                //targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
             }
-            //targetPosition = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-            
         }
     }
 }

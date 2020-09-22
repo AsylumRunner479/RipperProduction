@@ -8,11 +8,11 @@ public class Building : MonoBehaviour
     //public Shader blue;
     public GameObject mesh;
     public List<GameObject> neighbour;
-    private float distance;
+    //private float distance;
     // Start is called before the first frame update
     void Start()
     {
-        distance = Mathf.Infinity;
+        //distance = Mathf.Infinity;
         FindNeighBour();
         
     }

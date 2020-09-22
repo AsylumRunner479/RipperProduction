@@ -10,7 +10,7 @@ public class StreetManager : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        sightRange = 10f;
+        sightRange = 7f;
     }
 
     // Update is called once per frame
