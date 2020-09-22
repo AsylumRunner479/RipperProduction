@@ -124,7 +124,7 @@ public class EnemyUnit : MonoBehaviour
                 else if (number0 == 1)
                 {
                     CurSpeed -= 1;
-                    enemy.SetActive(true);
+                    //enemy.SetActive(true);
                     currentTime = 0;
                     Instantiate(enemy, Marker.transform.position, Quaternion.identity);
                 }
