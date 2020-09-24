@@ -27,7 +27,7 @@ public class Grid : MonoBehaviour
 
         Vector3 start = buildings[_currentIndex.x, _currentIndex.y].position;
         Vector3 end = buildings[_nextIndex.x, _nextIndex.y].position;
-        _transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.LookRotation((end - start).normalized), _factor);
+        _transform.rotation = Quaternion.LookRotation((end - start).normalized);
         _transform.position = Vector3.Lerp(start, end, _factor);
     }
 
