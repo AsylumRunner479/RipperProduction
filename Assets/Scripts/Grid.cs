@@ -20,7 +20,7 @@ public class Grid : MonoBehaviour
     //Vector3.lerp(node[currentNodeIndex.x][currentNodeIndex.y], node[nextNodeIndex.x][nextNodeIndex.y]
     public void RandomX(int random)
     {
-        random0 = Random.Range(0, random - 1);
+        random0 = Random.Range(0, random);
     }
     public void GetPosition(Transform _transform, Vector2Int _currentIndex, Vector2Int _nextIndex, float _factor)
     {

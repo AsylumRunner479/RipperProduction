@@ -14,6 +14,7 @@ public class EnemyUnit : MonoBehaviour
     private int number0;
     public GameObject Marker;
     private PlayerUnit playerUnit;
+    public int x, y;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +23,7 @@ public class EnemyUnit : MonoBehaviour
         CurSpeed = 2;
         MaxSpeed = 2;
         //playerIndex = new Vector2Int(2, 1);
-        currentIndex = new Vector2Int(Random.Range(0, grid.width), Random.Range(0,grid.height));
+        currentIndex = new Vector2Int(x, y);
         nextIndex = currentIndex;
         currentTime = maxTime;
     }

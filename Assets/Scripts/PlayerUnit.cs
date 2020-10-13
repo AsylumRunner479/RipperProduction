@@ -25,7 +25,7 @@ public class PlayerUnit : MonoBehaviour
         //targetPosition = transform.position;
         CurSpeed = 2;
         MaxSpeed = 2;
-        currentIndex = new Vector2Int(5, 5);
+        currentIndex = new Vector2Int(1,1);
         nextIndex = currentIndex;
         currentTime = maxTime;
     }
