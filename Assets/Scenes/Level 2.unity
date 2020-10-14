@@ -139,7 +139,6 @@ GameObject:
   - component: {fileID: 17321841}
   - component: {fileID: 17321840}
   - component: {fileID: 17321842}
-  - component: {fileID: 17321843}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -199,19 +198,6 @@ MonoBehaviour:
   buildingHolder: {fileID: 401279403}
   moveSpeed: 4
   homeSpawn: 0
---- !u!114 &17321843
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17321839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1d61a0c11bcadf45924bfebe6758625, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  EnemyTurn: {fileID: 204918766}
 --- !u!1 &105532216
 GameObject:
   m_ObjectHideFlags: 0
@@ -389,7 +375,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1001 &154431364
 PrefabInstance:
@@ -401,11 +387,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 17321842}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 17321843}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
@@ -679,7 +665,7 @@ RectTransform:
   - {fileID: 1789426128}
   - {fileID: 204918767}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -779,7 +765,7 @@ RectTransform:
   - {fileID: 105532217}
   - {fileID: 426417223}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -796,11 +782,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 17321842}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 17321843}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
@@ -927,7 +913,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &426417222
 GameObject:
@@ -1011,7 +997,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 17321843}
+      - m_Target: {fileID: 0}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1369,7 +1355,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 17321843}
+      - m_Target: {fileID: 0}
         m_MethodName: RestartGame
         m_Mode: 1
         m_Arguments:
@@ -1546,7 +1532,7 @@ MonoBehaviour:
   victoryImage: {fileID: 345129552}
   currentIndex: {x: 0, y: 0}
   nextIndex: {x: 0, y: 0}
-  maxTime: 1
+  maxTime: 10
   hasKnife: 0
   hasMap: 0
   hasMedication: 0
@@ -1554,8 +1540,8 @@ MonoBehaviour:
   - {fileID: 751855174}
   - {fileID: 1220887075}
   - {fileID: 735850441}
-  grid: {fileID: 17321842}
-  game: {fileID: 17321843}
+  grid: {fileID: 0}
+  game: {fileID: 0}
 --- !u!1 &1055936104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1229051353486211923, guid: 1d83c8116a0297f4793375366d2e29f0,
@@ -1722,11 +1708,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 17321842}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 17321843}
+      objectReference: {fileID: 0}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
@@ -1831,6 +1817,50 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5790678607632050934}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1330419722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1330419724}
+  - component: {fileID: 1330419723}
+  m_Layer: 0
+  m_Name: GameManager (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1330419723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330419722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1d61a0c11bcadf45924bfebe6758625, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EnemyTurn: {fileID: 204918766}
+--- !u!4 &1330419724
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330419722}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1377942828
 GameObject:
   m_ObjectHideFlags: 0
@@ -1895,7 +1925,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1380535562
 GameObject:
@@ -2117,7 +2147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1602832609
 GameObject:
@@ -2285,7 +2315,7 @@ RectTransform:
   - {fileID: 1602832610}
   - {fileID: 895582076}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
