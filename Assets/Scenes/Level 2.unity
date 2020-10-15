@@ -193,10 +193,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5a411a5de82ff934ea3a10de18077ff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  height: 0
-  width: 0
+  height: 9
+  width: 16
   buildingHolder: {fileID: 401279403}
-  moveSpeed: 4
+  moveSpeed: 10
   homeSpawn: 0
 --- !u!1 &105532216
 GameObject:

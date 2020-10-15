@@ -15,7 +15,7 @@ public class PlayerUnit : MonoBehaviour
     private int knife, map, medication;
     public bool hasKnife, hasMap, hasMedication;
     public GameObject[] inventory;
-    public Grid grid;
+    public GridManager grid;
     public GameManager game;
 
     private float currentTime = 0;

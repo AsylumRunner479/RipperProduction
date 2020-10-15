@@ -3,7 +3,7 @@
 public class EnemyUnit : MonoBehaviour
 {
 
-    public Grid grid;
+    public GridManager grid;
     public GameManager game;
     public Vector2Int currentIndex, nextIndex, playerIndex;
     public GameObject player, enemy;
