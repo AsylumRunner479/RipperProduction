@@ -387,11 +387,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 17321842}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330419723}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
@@ -782,11 +782,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 17321842}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330419723}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
@@ -1540,8 +1540,8 @@ MonoBehaviour:
   - {fileID: 751855174}
   - {fileID: 1220887075}
   - {fileID: 735850441}
-  grid: {fileID: 0}
-  game: {fileID: 0}
+  grid: {fileID: 17321842}
+  game: {fileID: 1330419723}
 --- !u!1 &1055936104 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1229051353486211923, guid: 1d83c8116a0297f4793375366d2e29f0,
@@ -1708,11 +1708,11 @@ PrefabInstance:
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: grid
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 17321842}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: game
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1330419723}
     - target: {fileID: 1165869230, guid: 1d83c8116a0297f4793375366d2e29f0, type: 3}
       propertyPath: player
       value: 
