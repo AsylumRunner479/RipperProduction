@@ -20065,7 +20065,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7249807736743351587}
   - component: {fileID: 4656258527069929376}
-  - component: {fileID: 1138055548370643968}
   - component: {fileID: 5473974675869582764}
   m_Layer: 0
   m_Name: Building
@@ -20102,20 +20101,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1138055548370643968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6060961347660042418}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 57fc94f75f942cc428e2e519adb8fed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mesh: {fileID: 5858602874563623714}
-  neighbour: []
 --- !u!114 &5473974675869582764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25427,12 +25412,6 @@ PrefabInstance:
 --- !u!4 &7428311135186880817 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 10c808c4c8fc9c647a37ed95e9e0b3d3,
-    type: 3}
-  m_PrefabInstance: {fileID: 2480389725760594475}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5858602874563623714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 10c808c4c8fc9c647a37ed95e9e0b3d3,
     type: 3}
   m_PrefabInstance: {fileID: 2480389725760594475}
   m_PrefabAsset: {fileID: 0}
