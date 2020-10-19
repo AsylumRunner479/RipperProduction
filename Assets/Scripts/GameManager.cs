@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
             return;
         }
 
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
         playerTurn = true;
     }
