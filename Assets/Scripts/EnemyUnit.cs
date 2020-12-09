@@ -128,7 +128,7 @@ public class EnemyUnit : MonoBehaviour
                     enemy.SetActive(true);
                     currentTime = 0;
                     Instantiate(enemy, Marker.transform.position, Quaternion.identity);
-                    enemy.SetActive(false);
+                    enemy.SetActive(true);
                 }
                 else
                 {

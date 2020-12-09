@@ -29,7 +29,15 @@ public class GameManager : MonoBehaviour
             return;
         }
 
+<<<<<<< Updated upstream
         //DontDestroyOnLoad(gameObject);
+=======
+<<<<<<< HEAD
+       // DontDestroyOnLoad(gameObject);
+=======
+        //DontDestroyOnLoad(gameObject);
+>>>>>>> 75bcc24aed85930eaebe8a2fd21ef19cf197f561
+>>>>>>> Stashed changes
 
         playerTurn = true;
     }
